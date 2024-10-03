@@ -1,19 +1,47 @@
+"use client";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import logo from "../images/footer-logo.png";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { navLinks } from "..";
 
 const Footer = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "sportsOn", // Service ID
+        "contact-form", // Template ID
+        form.current, // Form reference
+        "3fdRU0HZZeApUndz6" // Public key (user ID)
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+          alert("Email successfully sent!"); 
+          form.current.reset(); 
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          alert("Failed to send email, please try again.");
+        }
+      );
+  };
+
   return (
-    <footer className="bg-secondary py-12 text-white" id="contact">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-secondary py-16 text-white" id="contact">
+      <div className="max-w-6.5xl mx-auto grid px-4 grid-cols-1 md:grid-cols-4 gap-8 2xl:max-w-7xl">
         {/* Logo and Description */}
-        <div className="flex flex-col items-center md:items-start">
+        <div className="col-span-1 flex flex-col items-start">
           <Image src={logo} alt="Sportson Logo" width={150} height={50} />
-          <p className="mt-5 text-center md:text-left max-w-sm">
+          <p className="mt-5 text-left max-w-sm mb-4">
             SPORTSON simplifies booking sports venues like football pitches and
             tennis courts, making reservations easy and efficient.
           </p>
-          <div className="flex space-x-6 mt-4">
+          <div className="flex space-x-6">
             <a
               href="https://facebook.com"
               aria-label="Facebook"
@@ -37,75 +65,42 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        {/* Links - About & Company */}
-        <div className="flex justify-around">
-          <div>
-            <h3 className="font-semibold mb-4">About</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:underline">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  News
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Menu
-                </a>
-              </li>
-            </ul>
-          </div>
 
+        {/* Links - About & Company */}
+        <div className="col-span-1 flex lg:justify-center justify-start">
           <div>
-            <h3 className="font-semibold mb-4">Company</h3>
+            <h3 className="font-semibold text-gray-300 text-xl mb-4">
+              Quick Links
+            </h3>
             <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:underline">
-                  Why SPORTSON
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Partner with Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Blog
-                </a>
-              </li>
+              {navLinks.map((nav, index) => (
+                <li key={index}>
+                  <a href={nav.url} className="hover:underline cursor-pointer">
+                    {nav.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
         {/* Contact Form */}
-        <div>
-          <form className="space-y-4">
+        <div className="col-span-1 md:col-span-2">
+          <form ref={form} onSubmit={sendEmail} className="space-y-4">
             <input
               type="email"
+              name="email"
               placeholder="Enter your email"
               className="w-full px-4 py-3 bg-[#F6F7F9] rounded-lg text-black"
             />
             <textarea
               placeholder="Write your message"
+              name="message"
               className="w-full px-4 py-3 bg-[#F6F7F9] rounded-lg text-black h-24"
             ></textarea>
             <button
               type="submit"
+              name="message"
               className="bg-primary text-white px-6 py-3 rounded-lg w-full font-bold"
             >
               SEND

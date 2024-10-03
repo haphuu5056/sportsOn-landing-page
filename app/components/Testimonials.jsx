@@ -1,32 +1,14 @@
 import Image from "next/image";
-import customer1 from "../images/cus1.png";
-import customer2 from "../images/cus2.png";
-import { FaStar } from "react-icons/fa"; // Import star icon from react-icons
+import { FaStar } from "react-icons/fa";
+import { testimonials } from "..";
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      name: "Marwa Ali",
-      role: "Sports Enthusiast",
-      feedback:
-        "SPORTSON made booking a football pitch so simple! The process was smooth, and I had my reservation confirmed in minutes. Highly recommend for all sports lovers!",
-      image: customer1,
-      rating: 5, // 5 stars
-    },
-    {
-      name: "Mohamed Ahmed",
-      role: "Tennis Player",
-      feedback:
-        "Finding and booking a tennis court through SPORTSON was a breeze. The convenience and speed of the platform really stand out. Will definitely use it again!",
-      image: customer2,
-      rating: 4, // 4 stars
-    },
-  ];
+  
 
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto pt-16 flex flex-col items-center text-center mb-12">
+      <div className="max-w-6.5xl mx-auto px-4 sm:px-6 lg:px-8 2xl:max-w-7xl">
+        <div className="max-w-4xl mx-auto  flex flex-col items-center text-center mb-12">
           <h2 className="text-[28px] font-medium uppercase text-primary mb-3">
             Testimonials
           </h2>
@@ -37,7 +19,7 @@ const Testimonials = () => {
         <div className="flex flex-col md:flex-row gap-8">
           {/* First Testimonial */}
           <div className="p-6 rounded-lg flex-1">
-            <p className="text-xl leading-9 text-gray-900 mb-4">
+            <p className="text-lg leading-8 text-gray-900 mb-4">
               "{testimonials[0].feedback}"
             </p>
 
@@ -67,7 +49,7 @@ const Testimonials = () => {
 
           {/* Second Testimonial with offset */}
           <div className="p-6 rounded-lg flex-1 md:mt-16">
-            <p className="text-xl leading-9 text-gray-900 mb-4">
+            <p className="text-lg leading-8 text-gray-900 mb-4">
               "{testimonials[1].feedback}"
             </p>
 

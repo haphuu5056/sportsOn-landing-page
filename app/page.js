@@ -8,6 +8,7 @@ import GetTheApp from "./components/GetTheApp";
 import Faq from "./components/FAQ";
 import Footer from "./components/Footer";
 import Testimonials from "./components/Testimonials";
+import ProviderRequirements from "./components/ProviderRequirements";
 
 export default function HomePage() {
   return (
@@ -17,8 +18,9 @@ export default function HomePage() {
       <About />
       <Services />
       <Features />
-      <GetTheApp />
+      <ProviderRequirements />
       <Testimonials />
+      <GetTheApp />
       <Faq />
       <Footer />
     </>
