@@ -7,7 +7,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section
-      className="py-16 pt-32 md:pt-40 bg-white text-black dark:bg-gray-900 dark:text-white overflow-hidden"
+      className="py-16 pt-32 md:pt-40 bg-white text-black dark:bg-secondary dark:text-white overflow-hidden"
       id="home"
     >
       <div className="max-w-6.5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row justify-between items-center lg:items-start 2xl:max-w-7xl">
