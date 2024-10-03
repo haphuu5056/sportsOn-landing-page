@@ -33,7 +33,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-secondary py-16 text-white" id="contact">
-      <div className="max-w-6.5xl mx-auto grid px-4 grid-cols-1 md:grid-cols-4 gap-8 2xl:max-w-7xl">
+      <div className="container mx-auto grid px-4 grid-cols-1 md:grid-cols-4 gap-8 ">
         {/* Logo and Description */}
         <div className="col-span-1 flex flex-col items-start">
           <Image src={logo} alt="Sportson Logo" width={150} height={50} />

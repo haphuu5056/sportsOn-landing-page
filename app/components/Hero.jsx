@@ -7,13 +7,13 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section
-      className="py-16 pt-32 md:pt-40 bg-white text-black overflow-hidden"
+      className="py-16 pt-32 md:pt-40 2xl:pt-48 bg-white text-black h-screen lg:overflow-hidden"
       id="home"
     >
-      <div className="max-w-6.5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row justify-between items-center lg:items-start 2xl:max-w-7xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row justify-between items-center   h-full">
         {/* Left Side: Text */}
-        <div className="lg:w-1/2 space-y-4 mt-10 flex flex-col items-center text-center lg:text-left lg:items-start">
-          <h1 className="text-4xl md:text-5xl md:px-6 lg:px-0 lg:text-6xl font-black uppercase text-secondary leading-tight md:leading-[3.8rem] lg:leading-[4.3rem] ">
+        <div className="lg:w-1/2 space-y-4 pt-10 flex flex-col items-center text-center lg:text-left lg:items-start">
+          <h1 className="text-4xl md:text-5xl md:px-6 lg:px-0 lg:text-6xl 2xl:text-[5.7rem] font-black uppercase text-secondary leading-tight md:leading-[3.8rem] lg:leading-[4.6rem] 2xl:leading-[6.5rem] ">
             Find Futsal of Your Dream.
           </h1>
           <p className="text-lightGray text-base sm:text-lg  max-w-lg mb-5">
@@ -62,13 +62,13 @@ const Hero = () => {
         </div>
 
         {/* Right Side: Mobile Mockup */}
-        <div className="h-full mb-6 lg:mb-0">
+        <div className="h-full mb-6 lg:mb-0 ">
           <Image
             src={mobileMockup}
             alt="Mobile Mockup"
-            width={450}
-            height={900}
-            className=" md:max-w-full h-auto mx-auto lg:mx-0"
+            // width={600}
+            // height={900}
+            className="h-full object-contain"
           />
         </div>
       </div>

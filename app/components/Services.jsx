@@ -3,8 +3,8 @@ import { RiServiceLine } from "react-icons/ri";
 
 const Services = () => {
   return (
-    <section id="services" className="py-16">
-      <div className="max-w-6.5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start lg:flex-row lg:gap-12 2xl:gap-16  2xl:max-w-7xl">
+    <section id="services" className="py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start lg:flex-row lg:gap-12 2xl:gap-16 ">
         {/* Left Side: Title and Description */}
         <div className="lg:w-1/3 max-w-4xl mx-auto px-4 flex flex-col justify-center items-center lg:items-start mb-12 lg:mb-0 text-center lg:text-left">
           <div className="flex  justify-center  items-center text-center w-14 h-14 bg-lightGreenBackground rounded-full mb-4">

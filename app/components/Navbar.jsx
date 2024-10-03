@@ -42,9 +42,9 @@ const Navbar = () => {
       {!scrolled && <ContactDetail />}
       {/* Navbar */}
       <nav
-        className={`max-w-6.5xl mx-auto px-4 sm:px-6 lg:px-8 ${
+        className={`container mx-auto px-4 sm:px-6 lg:px-8 ${
           scrolled ? "py-2" : "py-8"
-        } transition-all duration-700 ease-out 2xl:max-w-7xl`}
+        } transition-all duration-700 ease-out `}
       >
         <div className="flex justify-between items-center">
           {/* Logo */}

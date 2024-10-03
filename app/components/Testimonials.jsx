@@ -7,7 +7,7 @@ const Testimonials = () => {
 
   return (
     <section className="py-16">
-      <div className="max-w-6.5xl mx-auto px-4 sm:px-6 lg:px-8 2xl:max-w-7xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="max-w-4xl mx-auto  flex flex-col items-center text-center mb-12">
           <h2 className="text-[28px] font-medium uppercase text-primary mb-3">
             Testimonials

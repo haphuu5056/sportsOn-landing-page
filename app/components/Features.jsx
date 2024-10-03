@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image"; // For optimized image handling
-import img from "../images/mobile.png"; // Mobile image import
+import Image from "next/image";
+import img from "../images/mobile.png"; 
 import { features } from "..";
 
 const Features = () => {
@@ -9,10 +9,7 @@ const Features = () => {
   const rightFeatures = features.slice(Math.ceil(features.length / 2));
 
   return (
-    <section
-      className="py-16 max-w-6xl mx-auto px-4 2xl:max-w-7xl"
-      id="features"
-    >
+    <section className="container mx-auto px-4 py-20" id="features">
       {/* Section Title */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-4 uppercase">
@@ -31,14 +28,12 @@ const Features = () => {
           {leftFeatures.map((feature, index) => (
             <div
               key={index}
-              className="py-4 px-4 transition-transform duration-200 flex flex-col items-end relative"
+              className="py-4 px-4 transition-transform duration-200 flex flex-col items-end text-right"
             >
               <h3 className="text-2xl font-medium text-primary mb-1">
                 {feature.title}
               </h3>
-              <p className="text-gray-700 text-end text-base">
-                {feature.description}
-              </p>
+              <p className="text-gray-700 text-base">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -59,14 +54,12 @@ const Features = () => {
           {rightFeatures.map((feature, index) => (
             <div
               key={index}
-              className="py-4 px-4 transition-transform duration-200 flex flex-col items-start relative"
+              className="py-4 px-4 transition-transform duration-200 flex flex-col items-start text-left"
             >
               <h3 className="text-2xl font-medium text-primary mb-1">
                 {feature.title}
               </h3>
-              <p className="text-gray-700 text-start text-base">
-                {feature.description}
-              </p>
+              <p className="text-gray-700 text-base">{feature.description}</p>
             </div>
           ))}
         </div>

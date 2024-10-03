@@ -3,10 +3,10 @@ import { requirements } from "..";
 
 const ProviderRequirements = () => {
   return (
-    <section className="py-16 max-w-6.5xl mx-auto px-6 lg:px-4 2xl:max-w-7xl">
+    <section className="py-20 container mx-auto px-6 lg:px-4 ">
       {/* Section Title */}
       <div className=" flex flex-col justify-center items-center text-center lg:items-start mb-10 ">
-        <span className="inline-block px-6 py-3 bg-primary text-white font-medium rounded-full hover:bg-secondary transition mb-4">
+        <span className="inline-block px-6 py-3 bg-primary text-white font-medium rounded-full hover:bg-secondary transition mb-8">
           Requirements
         </span>
         <h2 className="text-5xl font-semibold  text-secondary mb-4">
