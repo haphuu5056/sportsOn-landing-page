@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import img from "../images/mobile.png"; 
+import img from "../images/mobile-feature.png"; 
 import { features } from "..";
 
 const Features = () => {
@@ -9,13 +9,14 @@ const Features = () => {
   const rightFeatures = features.slice(Math.ceil(features.length / 2));
 
   return (
-    <section className="container mx-auto px-4 py-20" id="features">
+    <section className="container mx-auto py-16   px-4" id="features">
       {/* Section Title */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-4 uppercase">
-          Explore Sportson Features
+          Explore KICK C<span className="text-primary ">O</span>URT
+          Features
         </h2>
-        <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="mt-4 text-lg text-gray-600 max-w-2xl 2xl:max-w-xl mx-auto">
           Enhance your sports field rental experience with a variety of features
           tailored for both users and venue providers.
         </p>
@@ -28,12 +29,14 @@ const Features = () => {
           {leftFeatures.map((feature, index) => (
             <div
               key={index}
-              className="py-4 px-4 transition-transform duration-200 flex flex-col items-end text-right"
+              className="py-4 px-4 transition-transform duration-200 flex flex-col items-end relative"
             >
               <h3 className="text-2xl font-medium text-primary mb-1">
                 {feature.title}
               </h3>
-              <p className="text-gray-700 text-base">{feature.description}</p>
+              <p className="text-gray-900 text-end  text-base xl:text-xl xl:max-w-lg">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>
@@ -54,19 +57,21 @@ const Features = () => {
           {rightFeatures.map((feature, index) => (
             <div
               key={index}
-              className="py-4 px-4 transition-transform duration-200 flex flex-col items-start text-left"
+              className="py-4 px-4 transition-transform duration-200 flex flex-col items-start relative"
             >
               <h3 className="text-2xl font-medium text-primary mb-1">
                 {feature.title}
               </h3>
-              <p className="text-gray-700 text-base">{feature.description}</p>
+              <p className="text-gray-900 text-start text-base xl:text-xl xl:max-w-lg">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>
       </div>
 
       {/* Responsive Features Layout for small screens */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 lg:hidden px-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 lg:hidden px-6">
         {[...leftFeatures, ...rightFeatures].map((feature, index) => (
           <div
             key={index}

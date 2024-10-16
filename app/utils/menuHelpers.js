@@ -1,15 +1,17 @@
 // menuHelpers.js
 import Link from "next/link";
 import { navLinks,socialLinks } from "..";
-export const renderMenuLinks = ( active,handleSetActive, linkClass) =>
+export const renderMenuLinks = (activeSection,  handleSetActive, linkClass) =>
+  
   navLinks.map((link) => (
     <Link
       key={link.name}
-      href={link.href}
+      href={`#${link.href}`}
       className={`${
-        active === link.name ? "text-primary" : "text-[#525252]"
+        activeSection === link.href? 'text-primary' : ""  
       } text-lg hover:text-primary ${linkClass}`}
       onClick={() => handleSetActive(link.name)}
+      
     >
       {link.name}
     </Link>

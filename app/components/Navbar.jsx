@@ -6,12 +6,14 @@ import { LiaTimesSolid, LiaBarsSolid } from "react-icons/lia";
 import logo from "../images/Logo.png";
 import ContactDetail from "./ContactDetail";
 import { renderMenuLinks, renderSocialLinks } from "../utils/menuHelpers";
+import useActiveSection from "../hooks/useActiveSection";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuClosing, setMenuClosing] = useState(false);
   const [scrolled, setScrolled] = useState(false); // Track scroll state
+  const activeSection = useActiveSection();
 
   const handleSetActive = (section) => {
     setActive(section);
@@ -27,7 +29,6 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -37,14 +38,14 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 bg-white ${
         scrolled ? "bg-white shadow" : "bg-transparent"
-      }`}
+      } `}
     >
       {!scrolled && <ContactDetail />}
       {/* Navbar */}
       <nav
-        className={`container mx-auto px-4 sm:px-6 lg:px-8 ${
-          scrolled ? "py-2" : "py-8"
-        } transition-all duration-700 ease-out `}
+        className={`container mx-auto px-4  sm:px-6 lg:px-8 ${
+          scrolled ? "py-2 2xl:py-5" : "py-6 lg:py-8"
+        } transition-all duration-300 ease-out `}
       >
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -54,20 +55,20 @@ const Navbar = () => {
               alt="Logo"
               width={150}
               height={60}
-              className="sm:w-[140px] lg:w-[150px] h-auto"
+              className="sm:w-[140px] lg:w-[170px] 2xl:w-[180px] h-auto"
             />
           </Link>
           {/* Navigation Links for Larger Screens */}
           <div className="hidden md:flex space-x-6 items-center">
             {renderMenuLinks(
-              active,
+              activeSection,
               handleSetActive,
               "px-3 py-2 font-medium text-gray-900"
             )}
           </div>
           <Link
-            href="/Sporton-app"
-            className="hidden md:block bg-primary text-white px-4 py-2 rounded-md lg:text-lg font-medium hover:bg-primary-dark"
+            href="https://play.google.com/store/games?hl=en&pli=1"
+            className="hidden md:block bg-primary text-white px-4 py-2 rounded-md lg:text-lg font-medium hover:bg-primary-dark 2xl:px-6 2xl:text-xl"
           >
             Get the App
           </Link>
@@ -128,7 +129,7 @@ const Navbar = () => {
 
               {/* Get the App Button */}
               <Link
-                href="/Sporton-app"
+                href="https://play.google.com/store/games?hl=en&pli=1"
                 className="block bg-primary text-white text-center px-4 py-2 rounded-md text-lg font-medium hover:bg-primary-dark"
                 onClick={() => setMenuOpen(false)}
               >

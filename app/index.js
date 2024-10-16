@@ -20,18 +20,18 @@ import customer2 from "./images/cus2.png";
 
 
 export const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "Services", href: "#services" },
-  { name: "Features", href: "#features" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "home" },
+  { name: "Services", href: "services" },
+  { name: "Features", href: "features" },
+  { name: "Contact", href: "contact" },
 ];
 
 export const contactInfo = [
-  { icon: FaMapMarkerAlt, text: "123 Sportson St, Stadium City", href: "#" },
+  { icon: FaMapMarkerAlt, text: "123 Maka-Almukarama St, Stadium City", href: "#" },
   {
     icon: FaEnvelope,
-    text: "info@sportson.com",
-    href: "mailto:info@sportson.com",
+    text: "info@kickCourt.com",
+    href: "mailto:info@kickCourt.com",
   },
 ];
 
@@ -82,31 +82,32 @@ export const features = [
     description:
       "Allows field owners to manage field details, set prices, update availability, and monitor facilities.",
   },
-
-  {
-    title: "Orders Management",
-    description:
-      "Enables field owners to approve, track, and manage user bookings, including confirmed, pending, and canceled orders.",
-  },
-  {
-    title: "Time Schedule",
-    description:
-      "Displays available time slots for booking and allows users to reserve or view real-time field availability.",
-  },
   {
     title: "One-Time Booking",
     description:
       "Simplifies booking a field for a single session, with an easy-to-use process for selecting a time and venue.",
   },
+
   {
     title: "Provider Reports",
     description:
       "Generates reports for field owners to analyze bookings, revenue, customer behavior, and field usage.",
   },
   {
+    title: "Time Schedule",
+    description:
+      "Displays available time slots for booking and allows users to reserve or view real-time field availability.",
+  },
+
+  {
     title: "Payment Gateway",
     description:
       "Integrates secure payment options, enabling users to pay directly through the app and track transactions easily.",
+  },
+  {
+    title: "Orders Management",
+    description:
+      "Enables field owners to approve, track, and manage user bookings, including confirmed, pending, and canceled orders.",
   },
 ];
 
@@ -147,7 +148,7 @@ export const testimonials = [
     name: "Marwa Ali",
     role: "Sports Enthusiast",
     feedback:
-      "SPORTSON made booking a football pitch so simple! The process was smooth, and I had my reservation confirmed in minutes. Highly recommend for all sports lovers!",
+      "KICK COURT made booking a football pitch so simple! The process was smooth, and I had my reservation confirmed in minutes. Highly recommend for all sports lovers!",
     image: customer1,
     rating: 5, // 5 stars
   },
@@ -155,16 +156,16 @@ export const testimonials = [
     name: "Mohamed Ahmed",
     role: "Tennis Player",
     feedback:
-      "Finding and booking a tennis court through SPORTSON was a breeze. The convenience and speed of the platform really stand out. Will definitely use it again!",
+      "Finding and booking a tennis court through KICK COURT was a breeze. The convenience and speed of the platform really stand out. Will definitely use it again!",
     image: customer2,
     rating: 4, // 4 stars
   },
 ];
 export const faqs = [
   {
-    question: "What is SportsOn?",
+    question: "What is KICKCOURT?",
     answer:
-      "Sportson is an app designed to help you find and rent sports fields easily. Whether you’re booking for a football match, training, or a casual game, Sportson simplifies the process by offering real-time field availability, secure payments, and easy booking management.",
+      "KICKCOURT is an app designed to help you find and rent sports fields easily. Whether you’re booking for a football match, training, or a casual game, KICKCOURT simplifies the process by offering real-time field availability, secure payments, and easy booking management.",
   },
   {
     question: "How do I book a sports field?",
@@ -174,7 +175,7 @@ export const faqs = [
   {
     question: "Can I manage my bookings through the app?",
     answer:
-      "Yes! With Sportson, you can manage all your bookings in one place. View your upcoming reservations, track order statuses, and even cancel or modify your bookings if necessary.",
+      "Yes! With KICKCOURT, you can manage all your bookings in one place. View your upcoming reservations, track order statuses, and even cancel or modify your bookings if necessary.",
   },
   {
     question: "How does the payment process work?",
@@ -184,7 +185,38 @@ export const faqs = [
   {
     question: "What reports do field owners get?",
     answer:
-      "Field owners can generate detailed reports through Sportson, providing insights into bookings, revenue, customer behavior, and overall field usage, helping them optimize operations and maximize field utilization.",
+      "Field owners can generate detailed reports through KICKCOURT, providing insights into bookings, revenue, customer behavior, and overall field usage, helping them optimize operations and maximize field utilization.",
   },
+];
+export const cities = [
+  { value: "", label: "Select City" },
+  { value: "MOGADISHU", label: "Mogadishu" },
+  { value: "HARGEISA", label: "Hargeisa" },
+  { value: "KISMAYO", label: "Kismayo" },
+  { value: "BOSASO", label: "Bosaso" },
+  { value: "BAIDOA", label: "Baidoa" },
+  { value: "GAROWE", label: "Garowe" },
+  { value: "GALKAYO", label: "Galkayo" },
+  { value: "JOWHAR", label: "Jowhar" },
+  { value: "BELEDWEYNE", label: "Beledweyne" },
+  { value: "AFGOOYE", label: "Afgooye" },
+  { value: "DHUSAMAREB", label: "Dhusamareb" },
+  { value: "BALAD", label: "Balad" },
+];
+
+export const regions = [
+  { value: "", label: "Select Region" },
+  { value: "1", label: "Banaadir" },
+  { value: "2", label: "Sool" },
+  { value: "3", label: "Awdal" },
+  { value: "4", label: "Togdheer" },
+  { value: "5", label: "Nugaal" },
+  { value: "6", label: "Mudug" },
+  { value: "7", label: "Lower Shabelle" },
+  { value: "8", label: "Hiraan" },
+  { value: "9", label: "Middle Juba" },
+  { value: "10", label: "Bakool" },
+  { value: "11", label: "Lower Juba" },
+  { value: "12", label: "Bay" },
 ];
 

@@ -8,8 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-        maxWidth: {
-        '6.5xl': '75rem',
+      maxWidth: {
+        "6.5xl": "75rem",
+      },
+      screens: {
+        "xs": "360px",
       },
       colors: {
         primary: "#42D38A",

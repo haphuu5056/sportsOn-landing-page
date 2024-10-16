@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/svg+xml" href="/next.svg" />{" "}
+        <link rel="icon" type="image/svg+xml" href="/next.svg" />
       </head>
       <body className={raleway.className}>{children}</body>
     </html>

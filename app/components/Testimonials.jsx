@@ -13,7 +13,8 @@ const Testimonials = () => {
             Testimonials
           </h2>
           <p className="text-[45px] text-secondary font-bold uppercase">
-            Hear From Our SPORTSON App Users{" "}
+            Hear From Our KICK C<span className="text-primary ">O</span>URT App
+            Users{" "}
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-8">

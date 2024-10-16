@@ -3,7 +3,7 @@ import { RiServiceLine } from "react-icons/ri";
 
 const Services = () => {
   return (
-    <section id="services" className="py-20">
+    <section id="services" className="py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start lg:flex-row lg:gap-12 2xl:gap-16 ">
         {/* Left Side: Title and Description */}
         <div className="lg:w-1/3 max-w-4xl mx-auto px-4 flex flex-col justify-center items-center lg:items-start mb-12 lg:mb-0 text-center lg:text-left">
@@ -16,7 +16,7 @@ const Services = () => {
           <h2 className="text-3xl xl:text-4xl font-bold text-gray-900 uppercase mb-5">
             Our Services
           </h2>
-          <p className="text-lg text-gray-600 mb-4">
+          <p className="text-lg text-gray-600 mb-4 2xl:text-xl">
             Customers can search for futsal Venues near them with a seamless and
             user-friendly interface. Explore different options, check
             availability, and book time slots in just a few clicks.

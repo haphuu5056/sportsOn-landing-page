@@ -6,7 +6,7 @@ import Services from "./components/Services";
 import Features from "./components/Features";
 import GetTheApp from "./components/GetTheApp";
 import Faq from "./components/FAQ";
-import Footer from "./components/Footer";
+import Footer from "./components/Contact";
 import Testimonials from "./components/Testimonials";
 import ProviderRequirements from "./components/ProviderRequirements";
 

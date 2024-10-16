@@ -1,12 +1,11 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
-import logo from "../images/footer-logo.png";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import logo from "../images/Footer-logo.png";
 import { navLinks } from "..";
 
-const Footer = () => {
+const Contact = () => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -32,50 +31,28 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-secondary py-16 text-white" id="contact">
+    <section className="bg-secondary py-20 text-white" id="contact">
       <div className="container mx-auto grid px-4 grid-cols-1 md:grid-cols-4 gap-8 ">
         {/* Logo and Description */}
         <div className="col-span-1 flex flex-col items-start">
-          <Image src={logo} alt="Sportson Logo" width={150} height={50} />
-          <p className="mt-5 text-left max-w-sm mb-4">
-            SPORTSON simplifies booking sports venues like football pitches and
+          <Image src={logo} alt="kick  Court Logo" width={180} height={50} />
+          <p className="mt-5 text-left max-w-sm 2xl:text-xl ">
+            KICKCOURT simplifies booking sports venues like football pitches and
             tennis courts, making reservations easy and efficient.
           </p>
-          <div className="flex space-x-6">
-            <a
-              href="https://facebook.com"
-              aria-label="Facebook"
-              className="hover:text-light-green"
-            >
-              <FaFacebookF size={24} />
-            </a>
-            <a
-              href="https://instagram.com"
-              aria-label="Instagram"
-              className="hover:text-light-green"
-            >
-              <FaInstagram size={24} />
-            </a>
-            <a
-              href="https://twitter.com"
-              aria-label="Twitter"
-              className="hover:text-light-green"
-            >
-              <FaTwitter size={24} />
-            </a>
-          </div>
+          
         </div>
 
         {/* Links - About & Company */}
         <div className="col-span-1 flex lg:justify-center justify-start">
           <div>
-            <h3 className="font-semibold text-gray-300 text-xl mb-4">
+            <h3 className="font-semibold text-gray-100 text-xl 2xl:text-2xl mb-4 underline">
               Quick Links
             </h3>
             <ul className="space-y-2">
               {navLinks.map((nav, index) => (
                 <li key={index}>
-                  <a href={nav.url} className="hover:underline cursor-pointer">
+                  <a href={`${nav.href}`} className="hover:underline cursor-pointer" >
                     {nav.name}
                   </a>
                 </li>
@@ -91,12 +68,13 @@ const Footer = () => {
               type="email"
               name="email"
               placeholder="Enter your email"
-              className="w-full px-4 py-3 bg-[#F6F7F9] rounded-lg text-black"
+              required
+              className="w-full px-4 py-3 bg-[#ffffff]  rounded-lg text-black outline-none"
             />
             <textarea
               placeholder="Write your message"
               name="message"
-              className="w-full px-4 py-3 bg-[#F6F7F9] rounded-lg text-black h-24"
+              className="w-full px-4 py-3 bg-[#ffffff] rounded-lg text-black h-32 resize-none outline-none"
             ></textarea>
             <button
               type="submit"
@@ -108,8 +86,8 @@ const Footer = () => {
           </form>
         </div>
       </div>
-    </footer>
+    </section>
   );
 };
 
-export default Footer;
+export default Contact;

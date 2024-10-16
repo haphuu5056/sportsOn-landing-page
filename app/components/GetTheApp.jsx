@@ -1,7 +1,6 @@
 import Image from "next/image";
-import googlePlayBadge from "../images/Google-Play.svg";
-import appStoreBadge from "../images/Apple-Store.svg";
-import mobileApp from "../images/CTA mockups.png";
+import mobileApp from "../images/app.png";
+import { DownloadButtons } from "./common/DownloadButtons";
 
 const GetTheApp = () => {
   return (
@@ -10,34 +9,13 @@ const GetTheApp = () => {
         {/* Title and Description */}
         <div className="max-w-4xl mx-auto pt-16 flex flex-col items-center text-center mb-10">
           <h2 className="text-5xl font-bold uppercase text-secondary mb-3">
-            Get the Sportson mobile app.
+            Get the KICK C<span className="text-primary">O</span>URT mobile app.
           </h2>
           <p className="text-xl text-lightGray font-medium leading-8 max-w-lg">
             With this platform, you can access your account anywhere, anytime
             for balance and so much more.
           </p>
-
-          {/* App Store Badges */}
-          <div className="flex space-x-4 text-center items-center pt-8">
-            <a href="#" className="flex-shrink-0">
-              <Image
-                src={googlePlayBadge}
-                alt="Google Play"
-                width={180}
-                height={50}
-              />
-            </a>
-            <a href="#" className="flex-shrink-0">
-              <Image
-                src={appStoreBadge}
-                alt="App Store"
-                width={180}
-                height={50}
-              />
-            </a>
-          </div>
-
-          {/* Image */}
+          <DownloadButtons className={"text-center items-center pt-8"} />
           <div className="pt-4 flex justify-center">
             <Image
               src={mobileApp}
