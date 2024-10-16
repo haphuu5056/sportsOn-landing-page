@@ -3,7 +3,7 @@ const Notification = ({ message, type, onClose }) => {
 
   return (
     <div
-      className={`fixed top-4 right-4 p-4 rounded-lg text-white transition-opacity ${
+      className={`fixed bottom-[55%] right-4 p-3 px-6 rounded-lg text-white transition-opacity ${
         type === "success" ? "bg-green-500" : "bg-red-500"
       }`}
     >
@@ -14,3 +14,4 @@ const Notification = ({ message, type, onClose }) => {
     </div>
   );
 };
+export default Notification;
